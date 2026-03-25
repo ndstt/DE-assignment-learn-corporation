@@ -9,6 +9,7 @@ BRONZE_SOURCE_DIR = (
 )
 SILVER_DIR = DATA_DIR / "silver"
 SILVER_CSV_DIR = DATA_DIR / "silver_csv"
+GOLD_DIR = DATA_DIR / "gold"
 
 _BRONZE_DATASETS = {
     "leads": BRONZE_SOURCE_DIR / "leads_raw.csv",
@@ -22,6 +23,10 @@ _SILVER_DATASETS = {
     "sales": SILVER_DIR / "sales",
 }
 
+_GOLD_DATASETS = {
+    "student_360": GOLD_DIR / "student_360",
+}
+
 
 def bronze_dataset_path(dataset: str) -> Path:
     return _BRONZE_DATASETS[dataset]
@@ -29,3 +34,7 @@ def bronze_dataset_path(dataset: str) -> Path:
 
 def silver_dataset_path(dataset: str) -> Path:
     return _SILVER_DATASETS[dataset]
+
+
+def gold_dataset_path(dataset: str) -> Path:
+    return _GOLD_DATASETS[dataset]
